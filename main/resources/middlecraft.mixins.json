@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "net.middlecraft.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+      "MiddlecraftMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
