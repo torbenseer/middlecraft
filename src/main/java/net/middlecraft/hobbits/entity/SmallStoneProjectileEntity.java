@@ -1,37 +1,49 @@
 package net.middlecraft.hobbits.entity;
 
-import net.minecraft.entity.Entity;
+import net.middlecraft.hobbits.item.HobbitItems;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.data.DataTracker;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
-import net.minecraft.item.Item;
-import net.minecraft.nbt.NbtCompound;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.projectile.PersistentProjectileEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.hit.EntityHitResult;
+import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.World;
 
-public class SmallStoneEntity extends ThrownItemEntity {
-    public SmallStoneEntity(World world, PlayerEntity user) {
-        super(EntityType.SNOWBALL, world);
+public class SmallStoneProjectileEntity extends PersistentProjectileEntity {
+    private static final float DAMAGE = 3.0F; // Schaden in Herzen (1 Herz = 2.0)
+
+    public SmallStoneProjectileEntity(World world, LivingEntity shooter, ItemStack stack) {
+        super(HobbitEntities.SMALL_STONE_PROJECTILE, shooter, world, stack, null);
     }
 
-    public void setProperties(PlayerEntity user, float pitch, float yaw, float v, float v1, float v2) {
-
-    }
-
-    @Override
-    protected Item getDefaultItem() {
-        return null;
+    public SmallStoneProjectileEntity(World world, double x, double y, double z, ItemStack stack) {
+        super(HobbitEntities.SMALL_STONE_PROJECTILE, x, y, z, world, stack, null);
     }
 
     @Override
-    protected void initDataTracker(DataTracker.Builder builder) {
+    protected void onCollision(HitResult hitResult) {
+        super.onCollision(hitResult);
 
+        if (!this.getWorld().isClient() && hitResult.getType() == HitResult.Type.ENTITY) {
+            EntityHitResult entityHitResult = (EntityHitResult) hitResult;
+
+            if (entityHitResult.getEntity() instanceof LivingEntity target) {
+                this.damage((ServerWorld) this.getWorld(), this.getDamageSources().thrown(this, this.getOwner()), DAMAGE);
+            }
+            this.discard(); // Entferne das Projektil nach einem Treffer
+        }
     }
 
     @Override
-    public boolean damage(ServerWorld world, DamageSource source, float amount) {
-        return false;
+    protected ItemStack getDefaultItemStack() {
+        return new ItemStack(HobbitItems.SMALL_STONE_PROJECTILE); // Verweis auf das registrierte Item
+    }
+
+    @Override
+    protected double getGravity() {
+        return 0.03; // Schwerkraft des Projektils
     }
 }
+
+

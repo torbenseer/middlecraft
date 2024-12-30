@@ -1,36 +1,35 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "middlecraft",
 	"version": "${version}",
-	"name": "Example mod",
+	"name": "Middlecraft",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"TheDobbie"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"license": "MIT",
+	"icon": "assets/middlecraft/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+          "net.middlecraft.Middlecraft"
 		],
-		"client": [
-			"com.example.ExampleModClient"
+		"fabric-datagen": [
+          "net.middlecraft.MiddlecraftDataGenerator"
+		],
+		"client":[
+			"net.middlecraft.MiddlecraftClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+		"middlecraft.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.7",
+		"fabricloader": ">=0.16.9",
 		"minecraft": "~1.21.3",
 		"java": ">=21",
 		"fabric-api": "*"

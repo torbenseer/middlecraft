@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "Desktop/small_stones_2",
-		"particle": "Desktop/small_stones_2"
+		"0": "middlecraft:block/small_stones_block_2",
+		"particle": "middlecraft:block/small_stones_block_2"
 	},
 	"elements": [
 		{
