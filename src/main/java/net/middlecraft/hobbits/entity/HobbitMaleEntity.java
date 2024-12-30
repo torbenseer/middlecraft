@@ -1,6 +1,6 @@
-package net.middlecraft.hobbit.entity;
+package net.middlecraft.hobbits.entity;
 
-import net.middlecraft.MiddlecraftMod;
+import net.middlecraft.Middlecraft;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
