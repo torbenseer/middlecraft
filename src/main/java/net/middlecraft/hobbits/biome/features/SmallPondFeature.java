@@ -1,4 +1,4 @@
-package net.middlecraft.biome.features;
+package net.middlecraft.hobbits.biome.features;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.block.Blocks;

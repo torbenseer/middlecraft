@@ -16,6 +16,7 @@ public class Middlecraft implements ModInitializer {
 
 		HobbitEntities.registerEntities();
 		HobbitItems.registerModItems();
+		ModCommands.registerCommands();
 
 		LOGGER.info("Hello Fabric world!");
 	}

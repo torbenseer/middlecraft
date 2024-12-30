@@ -1,21 +1,18 @@
-package net.middlecraft.biome;
+package net.middlecraft.hobbits.biome;/*
+package net.middlecraft.hobbits.biome;
+
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.middlecraft.hobbits.biome.vegetation.ShireTreeFeature;
 import net.minecraft.sound.BiomeMoodSound;
 import net.minecraft.sound.MusicSound;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.BuiltinRegistries;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.BiomeKeys;
-import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.biome.GenerationSettings;
-import net.minecraft.world.gen.GenerationStep;
-
-import net.middlecraft.biome.vegetation.ShireTreeFeature;
 
 public class TheShireBiome {
 
@@ -58,3 +55,4 @@ public class TheShireBiome {
         });
     }
 }
+*/

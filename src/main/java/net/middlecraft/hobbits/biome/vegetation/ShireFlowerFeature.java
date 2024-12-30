@@ -1,4 +1,4 @@
-package net.middlecraft.biome.vegetation;
+package net.middlecraft.hobbits.biome.vegetation;
 
 public class ShireFlowerFeature {
 }

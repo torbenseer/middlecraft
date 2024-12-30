@@ -1,4 +1,4 @@
-package net.middlecraft.biome.features;
+package net.middlecraft.hobbits.biome.features;
 
 public class HobbitVillageStructure {
 }

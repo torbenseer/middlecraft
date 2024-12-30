@@ -36,7 +36,7 @@ public class SmallStoneProjectileModel extends EntityModel<EntityRenderState> {
 		return TexturedModelData.of(modelData, 64, 64);
 	}
 
-	public void render(MatrixStack matrices, VertexConsumer buffer, int light, int overlay,float f1) {
-		bb_main.render(matrices, buffer,light, overlay);
+	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
+		bb_main.render(matrices, vertexConsumer,light, overlay);
 	}
 }

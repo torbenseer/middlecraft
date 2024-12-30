@@ -21,6 +21,10 @@ public class SmallStoneProjectileEntity extends PersistentProjectileEntity {
         super(HobbitEntities.SMALL_STONE_PROJECTILE, x, y, z, world, stack, null);
     }
 
+    public SmallStoneProjectileEntity(EntityType<SmallStoneProjectileEntity> smallStoneProjectile, World world) {
+        super(smallStoneProjectile, world);
+    }
+
     @Override
     protected void onCollision(HitResult hitResult) {
         super.onCollision(hitResult);
