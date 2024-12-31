@@ -2,6 +2,7 @@ package net.middlecraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.middlecraft.hobbits.block.HobbitBlocks;
 import net.middlecraft.hobbits.entity.HobbitEntities;
 import net.middlecraft.hobbits.item.HobbitItems;
 import org.slf4j.Logger;
@@ -17,7 +18,6 @@ public class Middlecraft implements ModInitializer {
 		HobbitEntities.registerEntities();
 		HobbitItems.registerModItems();
 		ModCommands.registerCommands();
-
-		LOGGER.info("Hello Fabric world!");
+		HobbitBlocks.registerModBlocks();
 	}
 }

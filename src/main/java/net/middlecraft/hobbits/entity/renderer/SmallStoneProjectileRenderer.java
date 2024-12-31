@@ -35,18 +35,15 @@ public class SmallStoneProjectileRenderer extends ProjectileEntityRenderer<Small
         return new ProjectileEntityRenderState();
     }
 
-
     @Override
     public void render(ProjectileEntityRenderState state, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
         matrices.push();
         // Passe die Position und Skalierung an
-        matrices.translate(0.0, 0.25, 0.0);
-        matrices.scale(0.5F, 0.5F, 0.5F);
+        matrices.translate(0.0, -0.35, 0.0);
+        matrices.scale(0.3F, 0.3F, 0.3F);
 
         // Rendere das Modell
         this.model.render(matrices, vertexConsumers.getBuffer(RenderLayer.getEntityCutout(TEXTURE)), light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
         matrices.pop();
-
-        super.render(state, matrices, vertexConsumers, light);
     }
 }

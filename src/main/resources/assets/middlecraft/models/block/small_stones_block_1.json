@@ -1,0 +1,24 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/cube_all",
+	"textures": {
+		"stone": "middlecraft:block/small_stones_block",
+		"particle": "middlecraft:block/small_stones_block"
+	},
+	"elements": [
+		{
+			"name": "stone_1",
+			"from": [3, 0, 5],
+			"to": [5, 1, 8],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [3, 0, 5]},
+			"faces": {
+				"north": {"uv": [7, 2, 9, 3], "texture": "#stone"},
+				"east": {"uv": [0, 6, 3, 7], "texture": "#stone"},
+				"south": {"uv": [3, 7, 5, 8], "texture": "#stone"},
+				"west": {"uv": [3, 6, 6, 7], "texture": "#stone"},
+				"up": {"uv": [2, 6, 0, 3], "texture": "#stone"},
+				"down": {"uv": [4, 3, 2, 6], "texture": "#stone"}
+			}
+		}
+	]
+}

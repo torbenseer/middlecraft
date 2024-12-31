@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "stone_count=1": { "model": "middlecraft:block/small_stones_block_1" },
+    "stone_count=2": { "model": "middlecraft:block/small_stones_block_2" },
+    "stone_count=3": { "model": "middlecraft:block/small_stones_block_3" }
+  }
+}
+

@@ -20,7 +20,7 @@ public class HobbitEntities {
     public static final EntityType<SmallStoneProjectileEntity> SMALL_STONE_PROJECTILE = Registry.register(
             Registries.ENTITY_TYPE,
             STONE_PROJECTILE_ENTITY_ID,
-            EntityType.Builder.<SmallStoneProjectileEntity>create(SpawnGroup.MISC)
+            EntityType.Builder.<SmallStoneProjectileEntity>create(SmallStoneProjectileEntity::new, SpawnGroup.MISC)
                     .dimensions(0.25f, 0.25f)
                     .build(STONE_PROJECTILE_ENTITY_LEY)
     );
